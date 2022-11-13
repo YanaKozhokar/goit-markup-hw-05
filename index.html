@@ -28,7 +28,9 @@
             ><span class="logo-web">Web</span>Studio</a
           >
           <ul class="header__nav-list">
-            <li><a class="header__nav-list-current link" href="./index.html">Студія</a></li>
+            <li class="current">
+              <a class="header__nav-list-current link" href="./index.html">Студія</a>
+            </li>
             <li><a class="header__nav-list-item link" href="./portfolio.html">Портфоліо</a></li>
             <li><a class="header__nav-list-item link" href="">Контакти</a></li>
           </ul>
@@ -57,7 +59,7 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero__title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-          <button class="hero__button" type="button">Замовити послугу</button>
+          <button data-modal-open class="hero__button" type="button">Замовити послугу</button>
         </div>
       </section>
       <section class="advantages section">
@@ -115,20 +117,38 @@
         <div class="container">
           <h2 class="about-us__services-title">Чим ми займаємося</h2>
           <ul class="about-us__services-list">
-            <li class="about-us__services-images-item">
-              <a class="link" href=""
-                ><img src="./images/desktop.jpg" alt="Десктопні програми" width="370"
-              /></a>
+            <li class="about-us__services-item">
+              <a class="link" href="">
+                <img
+                  class="about-us__img"
+                  src="./images/desktop.jpg"
+                  alt="Десктопні програми"
+                  width="370"
+                />
+                <p class="about-us__services-description">Десктопні додатки</p>
+              </a>
             </li>
-            <li class="about-us__services-images-item">
-              <a class="link" href=""
-                ><img src="./images/smartphone.jpg" alt="Додатки для смартфонів" width="370"
-              /></a>
+            <li class="about-us__services-item">
+              <a class="link" href="">
+                <img
+                  class="about-us__img"
+                  src="./images/smartphone.jpg"
+                  alt="Додатки для смартфонів"
+                  width="370"
+                />
+                <p class="about-us__services-description">Мобільні додатки</p>
+              </a>
             </li>
-            <li class="about-us__services-images-item">
-              <a class="link" href=""
-                ><img src="./images/tablet.jpg" alt="Програми для планшетів" width="370"
-              /></a>
+            <li class="about-us__services-item">
+              <a class="link" href="">
+                <img
+                  class="about-us__img"
+                  src="./images/tablet.jpg"
+                  alt="Програми для планшетів"
+                  width="370"
+                />
+                <p class="about-us__services-description">Дизайнерські рішення</p>
+              </a>
             </li>
           </ul>
         </div>
@@ -383,5 +403,15 @@
         </div>
       </div>
     </footer>
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <button data-modal-close class="btn-close" type="button">
+          <svg width="11" height="11">
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
