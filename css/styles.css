@@ -63,49 +63,6 @@ ul {
   width: 1200px;
 }
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--backdrop);
-  transition: opacity 250ms linear, visibility 300ms linear;
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.modal {
-  padding: 9px 9px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
-  background-color: var(--background-color-white);
-  transform: translate(-50% -50%), scale(1);
-  transition: transform 1000ms linear;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50% -50%), scale(0);
-}
-
-.btn-close {
-  margin-left: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 /* Header */
 .header {
   background-color: var(--background-color-white);
@@ -543,6 +500,71 @@ ul {
   background-color: var(--color-accent);
 }
 
+.subscription {
+  margin-left: 93px;
+}
+
+.subscription-label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+
+.subscription-title {
+  display: block;
+}
+
+.subscription-container {
+  margin-top: 20px;
+  display: flex;
+}
+
+.subscription-input {
+  padding: 15px 16px;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
+  color: var(--secondary-text-color);
+}
+
+.subscription-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-btn {
+  margin-left: 12px;
+  padding: 10px 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background: var(--color-accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  color: var(--icon-accent);
+  fill: var(--icon-accent);
+}
+
+.subscription-btn-icon {
+  margin-left: 10px;
+}
+
 /* Portfolio */
 
 .works__filter {
@@ -651,4 +673,58 @@ ul {
   font-size: 16px;
   line-height: 1.88;
   color: var(--primary-text-color);
+}
+
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop);
+  transition: opacity 250ms linear, visibility 300ms linear;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  padding: 9px 9px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--background-color-white);
+  transform: translate(-50% -50%), scale(1);
+  transition: transform 1000ms linear;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50% -50%), scale(0);
+}
+
+.btn-close {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
 }
